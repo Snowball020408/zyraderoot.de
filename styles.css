@@ -15,6 +15,6 @@ header {
   font-size: 50px
 }
 
-.main-heading p {
+.main-heading #param {
   color: black;
 }
