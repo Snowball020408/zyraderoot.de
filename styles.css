@@ -14,3 +14,7 @@ header {
 .main-heading h1 {
   font-size: 50px
 }
+
+.main-heading p {
+  color: black;
+}
