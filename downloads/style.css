@@ -1,0 +1,28 @@
+body {
+    background-color: rgb(100, 0, 0);
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+.header h1 {
+    color: rgb(180, 180, 180);
+}
+
+.apps {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: gray;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(65, 65, 65);
+}
