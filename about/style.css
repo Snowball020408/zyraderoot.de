@@ -1,0 +1,26 @@
+body {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertikal zentriert */
+  align-items: center;     /* Horizontal zentriert */
+  min-height: 100vh;       /* Nutzt die volle Bildschirmhöhe */
+}
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+a {
+  color:rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(90, 90, 90);
+}
