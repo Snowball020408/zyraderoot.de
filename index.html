@@ -1,21 +1,348 @@
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
-  <link rel="stylesheet" href="styles.css">
-  <title>Zyraderoot</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>for u</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    overflow:hidden;
+    height:100vh;
+    background:
+    linear-gradient(to bottom,#0b1020,#16213e,#243b63);
+    font-family:'Poppins',sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+}
+
+/* stars */
+
+.stars{
+    position:absolute;
+    width:100%;
+    height:100%;
+}
+
+.star{
+    position:absolute;
+    width:2px;
+    height:2px;
+    background:white;
+    border-radius:50%;
+    opacity:0.5;
+    animation:twinkle 4s infinite ease-in-out;
+}
+
+@keyframes twinkle{
+    0%,100%{
+        opacity:0.2;
+        transform:scale(1);
+    }
+    50%{
+        opacity:1;
+        transform:scale(1.8);
+    }
+}
+
+/* moon */
+
+.moon{
+    position:absolute;
+    top:70px;
+    right:140px;
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    background:#fff5cc;
+    box-shadow:
+    0 0 30px #fff5cc,
+    0 0 80px rgba(255,245,204,0.35);
+}
+
+/* cat */
+
+.cat-wrapper{
+    position:absolute;
+    bottom:110px;
+    animation:float 5s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0px);
+    }
+    50%{
+        transform:translateY(-10px);
+    }
+}
+
+.cat{
+    position:relative;
+    width:180px;
+    height:150px;
+}
+
+/* body */
+
+.body{
+    position:absolute;
+    bottom:0;
+    width:180px;
+    height:95px;
+    background:#111;
+    border-radius:90px 90px 30px 30px;
+}
+
+/* head */
+
+.head{
+    position:absolute;
+    top:0;
+    left:42px;
+    width:96px;
+    height:82px;
+    background:#111;
+    border-radius:50%;
+}
+
+/* ears */
+
+.ear{
+    position:absolute;
+    width:30px;
+    height:30px;
+    background:#111;
+    transform:rotate(45deg);
+    top:-8px;
+}
+
+.left{
+    left:10px;
+}
+
+.right{
+    right:10px;
+}
+
+/* eyes */
+
+.eye{
+    position:absolute;
+    width:10px;
+    height:10px;
+    background:#ffe97a;
+    border-radius:50%;
+    top:36px;
+    animation:blink 6s infinite;
+}
+
+.eye.left-eye{
+    left:28px;
+}
+
+.eye.right-eye{
+    right:28px;
+}
+
+@keyframes blink{
+    0%,47%,100%{
+        transform:scaleY(1);
+    }
+    48%,50%{
+        transform:scaleY(0.1);
+    }
+}
+
+/* tail */
+
+.tail{
+    position:absolute;
+    width:90px;
+    height:18px;
+    background:#111;
+    right:-60px;
+    bottom:40px;
+    border-radius:20px;
+    transform-origin:left center;
+    animation:tail 3s ease-in-out infinite;
+}
+
+@keyframes tail{
+    0%,100%{
+        transform:rotate(18deg);
+    }
+    50%{
+        transform:rotate(-12deg);
+    }
+}
+
+/* message */
+
+.message-box{
+    position:absolute;
+    width:min(760px,85%);
+    text-align:center;
+    line-height:1.9;
+    font-weight:300;
+    font-size:17px;
+    opacity:0;
+    animation:fadeIn 2.5s ease forwards;
+    animation-delay:1.5s;
+    color:rgba(255,255,255,0.92);
+    text-shadow:0 0 10px rgba(255,255,255,0.08);
+}
+
+.message-box span{
+    color:#ffeaa7;
+    font-weight:500;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ground */
+
+.ground{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:170px;
+    background:linear-gradient(to top,#0a0f1d,transparent);
+}
+
+/* floating particles */
+
+.particle{
+    position:absolute;
+    color:white;
+    opacity:0.08;
+    animation:rise linear infinite;
+}
+
+@keyframes rise{
+    from{
+        transform:translateY(0);
+        opacity:0;
+    }
+
+    20%{
+        opacity:0.08;
+    }
+
+    to{
+        transform:translateY(-110vh);
+        opacity:0;
+    }
+}
+
+</style>
 </head>
+
 <body>
-  <header>
-    <div class="main-heading">
-      <h1><span id="Welcome">Zyraderoot.de</span></h1>
-      <p>Welcome to my page im happy you found it the downloads are at the bottom go ahead and try it my Friend :-)</p>
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="/downloads/index.html">Downloads</a></li>
-          <li><a href="/about/index.html">About</a></li>
-        </ul>
-      </nav>
+
+<div class="stars"></div>
+
+<div class="moon"></div>
+
+<div class="message-box">
+    I told you I wanted to gift you something, so I will.
+    I didn’t do this because of an occasion, but because you are way too important to get nothing from me.
+
+    And I’m sorry that I was annoying today. You told me that I was, so I won’t do it again.
+
+    Thank you for staying with me for 3 years now. That’s actually a pretty long time XD.
+
+    But these are the <span>best 3 years</span> I’ve had, because I had someone so special in them.
+</div>
+
+<div class="cat-wrapper">
+
+    <div class="cat">
+
+        <div class="head">
+
+            <div class="ear left"></div>
+            <div class="ear right"></div>
+
+            <div class="eye left-eye"></div>
+            <div class="eye right-eye"></div>
+
+        </div>
+
+        <div class="body"></div>
+
+        <div class="tail"></div>
+
     </div>
-  </header>
+
+</div>
+
+<div class="ground"></div>
+
+<script>
+
+/* stars */
+
+const stars = document.querySelector(".stars");
+
+for(let i = 0; i < 140; i++){
+
+    const star = document.createElement("div");
+
+    star.classList.add("star");
+
+    star.style.left = Math.random()*100 + "%";
+    star.style.top = Math.random()*100 + "%";
+
+    star.style.animationDelay = Math.random()*5 + "s";
+
+    stars.appendChild(star);
+}
+
+/* floating particles */
+
+for(let i = 0; i < 25; i++){
+
+    const p = document.createElement("div");
+
+    p.classList.add("particle");
+
+    p.innerHTML = "✦";
+
+    p.style.left = Math.random()*100 + "%";
+    p.style.bottom = "-20px";
+
+    p.style.fontSize = (Math.random()*12 + 8) + "px";
+
+    p.style.animationDuration = (Math.random()*10 + 10) + "s";
+
+    p.style.animationDelay = Math.random()*8 + "s";
+
+    document.body.appendChild(p);
+}
+
+</script>
+
 </body>
+</html>
