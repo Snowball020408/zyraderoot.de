@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<title>I hope u Like it</title>
+<title>for u</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
@@ -18,7 +18,7 @@
 
 body{
     overflow:hidden;
-    height:100vh;
+    min-height:100vh;
     background:
     linear-gradient(to bottom,#0b1020,#16213e,#243b63);
     font-family:'Poppins',sans-serif;
@@ -26,6 +26,7 @@ body{
     justify-content:center;
     align-items:center;
     color:white;
+    padding:20px;
 }
 
 /* stars */
@@ -61,10 +62,10 @@ body{
 
 .moon{
     position:absolute;
-    top:70px;
-    right:140px;
-    width:130px;
-    height:130px;
+    top:60px;
+    right:8%;
+    width:110px;
+    height:110px;
     border-radius:50%;
     background:#fff5cc;
     box-shadow:
@@ -76,8 +77,9 @@ body{
 
 .cat-wrapper{
     position:absolute;
-    bottom:110px;
+    bottom:70px;
     animation:float 5s ease-in-out infinite;
+    z-index:2;
 }
 
 @keyframes float{
@@ -192,8 +194,8 @@ body{
 /* message */
 
 .message-box{
-    position:absolute;
-    width:min(760px,85%);
+    position:relative;
+    width:min(760px,90%);
     text-align:center;
     line-height:1.9;
     font-weight:300;
@@ -203,6 +205,8 @@ body{
     animation-delay:1.5s;
     color:rgba(255,255,255,0.92);
     text-shadow:0 0 10px rgba(255,255,255,0.08);
+    z-index:2;
+    padding:20px;
 }
 
 .message-box span{
@@ -256,6 +260,60 @@ body{
     }
 }
 
+/* ---------------- MOBILE ---------------- */
+
+@media (max-width:768px){
+
+    body{
+        padding:15px;
+        align-items:flex-start;
+    }
+
+    .moon{
+        width:75px;
+        height:75px;
+        top:35px;
+        right:20px;
+    }
+
+    .message-box{
+        margin-top:120px;
+        width:100%;
+        font-size:14px;
+        line-height:1.8;
+        padding:10px 18px;
+    }
+
+    .cat-wrapper{
+        bottom:90px;
+        transform:scale(0.8);
+    }
+
+    .ground{
+        height:140px;
+    }
+
+}
+
+@media (max-width:480px){
+
+    .message-box{
+        font-size:13px;
+        line-height:1.7;
+    }
+
+    .cat-wrapper{
+        transform:scale(0.68);
+        bottom:75px;
+    }
+
+    .moon{
+        width:60px;
+        height:60px;
+    }
+
+}
+
 </style>
 </head>
 
@@ -269,9 +327,15 @@ body{
     I told you I wanted to gift you something, so I will.
     I didn’t do this because of an occasion, but because you are way too important to get nothing from me.
 
+    <br><br>
+
     And I’m sorry that I was annoying today. You told me that I was, so I won’t do it again.
 
+    <br><br>
+
     Thank you for staying with me for 3 years now. That’s actually a pretty long time XD.
+
+    <br><br>
 
     But these are the <span>best 3 years</span> I’ve had, because I had someone so special in them.
 </div>
